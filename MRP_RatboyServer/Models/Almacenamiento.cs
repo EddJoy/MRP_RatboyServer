@@ -19,15 +19,24 @@ namespace MRP_RatboyServer.Models
         {
             this.Ensamble = new HashSet<Ensamble>();
         }
-    
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Almacenamiento")]
         public int idAlmacenamento { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Nombre")]
         public string nombre { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Tipo")]
         public string tipo { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Capacidad")]
         public string capacidad { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Costo con proveedor")]
         public double costoProveedor { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Costo a venta")]
         public double costoVenta { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Marca")]
         public string marca { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Watts")]
         public double watts { get; set; }
         public Nullable<double> RPM { get; set; }
     

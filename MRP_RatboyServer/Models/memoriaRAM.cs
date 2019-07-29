@@ -19,16 +19,26 @@ namespace MRP_RatboyServer.Models
         {
             this.Ensamble = new HashSet<Ensamble>();
         }
-    
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID RAM")]
         public int idRAM { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Nombre del ensamble")]
         public string nombre { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tipo de memoria")]
         public int idTipoMemoria { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Cantidad de memoria")]
         public int cantidad { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Velocidad de memoria")]
         public double velocidad { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Costo con proveedor")]
         public double costoVendedor { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Costo a venta")]
         public double costoVenta { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Marca")]
         public string marca { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Watts")]
         public int watts { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -1,0 +1,67 @@
+﻿@model MRP_RatboyServer.Models.Persona
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_MenuLateral.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Persona</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apePaterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apePaterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apeMaterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apeMaterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPersona }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

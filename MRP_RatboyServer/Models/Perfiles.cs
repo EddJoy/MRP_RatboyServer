@@ -19,11 +19,16 @@ namespace MRP_RatboyServer.Models
         {
             this.Perfil_Ensamble = new HashSet<Perfil_Ensamble>();
         }
-    
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Perfil")]
         public int idPerfil { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Nombre del perfil")]
         public string Nombre { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Nivel del perfil")]
         public string Nivel { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Ensamble")]
         public int idEnsamble_FK { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public Nullable<bool> estatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -19,13 +19,20 @@ namespace MRP_RatboyServer.Models
         {
             this.Usuarios = new HashSet<Usuarios>();
         }
-    
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Persona")]
         public int idPersona { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Nombre")]
         public string nombre { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Apellido paterno")]
         public string apePaterno { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Apellido materno")]
         public string apeMaterno { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Edad")]
         public Nullable<int> edad { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Dirección")]
         public string direccion { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

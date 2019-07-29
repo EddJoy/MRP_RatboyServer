@@ -20,16 +20,26 @@ namespace MRP_RatboyServer.Models
             this.cuelloBotella = new HashSet<cuelloBotella>();
             this.Perfil_Ensamble = new HashSet<Perfil_Ensamble>();
         }
-    
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Ensamble")]
         public int idEnsamble { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Placa madre")]
         public int idPlacaMadre_FK { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Procesador")]
         public int idProcesador_FK { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID RAM")]
         public int idRAM_FK { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Almacenamiento")]
         public int idAlmacenamiento_FK { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Fuente de poder")]
         public int idFuentePoder_FK { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tarjeta de Video")]
         public int idTarjetaVideo_FK { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Gabinete")]
         public int idGabinete_FK { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Empleado")]
         public int idEmpleado_FK { get; set; }
     
         public virtual Almacenamiento Almacenamiento { get; set; }

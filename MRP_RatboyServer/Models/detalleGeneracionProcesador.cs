@@ -20,9 +20,13 @@ namespace MRP_RatboyServer.Models
             this.GeneracionSoportadaPlacaMadre = new HashSet<GeneracionSoportadaPlacaMadre>();
             this.procesador = new HashSet<procesador>();
         }
-    
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Generación del procesador")]
         public int idGeneracionProcesador { get; set; }
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "Detalle generación procesador 1")]
         public string DetalleGeneracionProcesador1 { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

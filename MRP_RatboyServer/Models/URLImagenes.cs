@@ -14,9 +14,13 @@ namespace MRP_RatboyServer.Models
     
     public partial class URLImagenes
     {
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID URL IMAGE")]
         public int idUrl { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Tipo")]
         public string tipo { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "URL")]
         public string URL { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public Nullable<bool> estatus { get; set; }
     }
 }

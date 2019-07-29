@@ -19,11 +19,16 @@ namespace MRP_RatboyServer.Models
         {
             this.Ensamble = new HashSet<Ensamble>();
         }
-    
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Empleado")]
         public int idEmpleado { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Ensamble")]
         public int idEnsamble { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Fecha")]
         public System.DateTime fecha { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Usuario")]
         public int idUsuario_FK { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
