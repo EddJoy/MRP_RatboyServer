@@ -141,6 +141,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -327,6 +328,7 @@
     <Content Include="Views\Personas\Index.cshtml" />
     <Content Include="Views\Shared\_MenuLateral.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Register\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
