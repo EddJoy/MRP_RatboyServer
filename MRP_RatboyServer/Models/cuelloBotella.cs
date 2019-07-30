@@ -14,19 +14,12 @@ namespace MRP_RatboyServer.Models
     
     public partial class cuelloBotella
     {
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Cuello de botella")]
         public int idCuelloBotella { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Ensamble")]
         public int idEnsamble_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Procesador")]
         public int idProcesador_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Modelo")]
         public string modelo { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Comentarios")]
         public string comnetarios { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tarjeta de Video")]
         public int idTarjetaVideo_FK { get; set; }
     
         public virtual Ensamble Ensamble { get; set; }

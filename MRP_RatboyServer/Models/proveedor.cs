@@ -12,11 +12,11 @@ namespace MRP_RatboyServer.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class URLImagenes
+    public partial class proveedor
     {
-        public int idUrl { get; set; }
-        public string tipo { get; set; }
-        public string URL { get; set; }
-        public Nullable<bool> estatus { get; set; }
+        public int idProveedor { get; set; }
+        public string nombreProveedor { get; set; }
+        public string nombreEmpresa { get; set; }
+        public int tipo { get; set; }
     }
 }

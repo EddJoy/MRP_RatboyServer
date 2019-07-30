@@ -14,11 +14,8 @@ namespace MRP_RatboyServer.Models
     
     public partial class Perfil_Ensamble
     {
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Perfil de ensamble")]
         public int idPerfil_Ensamble { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Perfil")]
         public int idPerfil_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Ensamble")]
         public int idEnsamble_FK { get; set; }
     
         public virtual Ensamble Ensamble { get; set; }

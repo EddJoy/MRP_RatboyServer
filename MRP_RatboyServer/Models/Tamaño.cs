@@ -19,12 +19,9 @@ namespace MRP_RatboyServer.Models
         {
             this.PlacaMadre = new HashSet<PlacaMadre>();
         }
-
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tamaño")]
+    
         public int idTamaño { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Nombre del tamaño")]
         public string nombreTamaño { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public Nullable<bool> estatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

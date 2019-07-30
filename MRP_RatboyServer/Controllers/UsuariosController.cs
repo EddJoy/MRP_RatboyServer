@@ -13,7 +13,7 @@ namespace MRP_RatboyServer.Controllers
     [Authorize]
     public class UsuariosController : Controller
     {
-        private BD_ArmadoPcEntities db = new BD_ArmadoPcEntities();
+        private BD_ArmadoPcEntities1 db = new BD_ArmadoPcEntities1();
 
         // GET: Usuarios
         public ActionResult Index()

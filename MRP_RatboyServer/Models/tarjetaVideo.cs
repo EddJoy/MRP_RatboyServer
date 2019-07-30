@@ -20,24 +20,15 @@ namespace MRP_RatboyServer.Models
             this.cuelloBotella = new HashSet<cuelloBotella>();
             this.modeloVideo = new HashSet<modeloVideo>();
         }
-
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tarjeta de vídeo")]
+    
         public int idTarjetaVideo { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Nombre")]
         public string nombre { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Arquitectura")]
         public string arquitectura { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Cuda core")]
         public int cudaCore { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Frame Buffer")]
         public int frameBuffer { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Velocidad de reloj")]
         public int velocidadReloj { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Velocidad de memoria")]
         public int velocidadMemoria { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Nombre del modelo")]
         public string nombreModelo { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -19,14 +19,10 @@ namespace MRP_RatboyServer.Models
         {
             this.Ensamble = new HashSet<Ensamble>();
         }
-
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Modelo Video")]
+    
         public int idModeloVideo { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tarjeta de video")]
         public int idTarjetaVideo_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Modelo")]
         public string modelo { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

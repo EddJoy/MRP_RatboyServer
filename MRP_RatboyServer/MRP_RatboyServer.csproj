@@ -145,6 +145,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Accesorio.cs">
+      <DependentUpon>ConexionServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Almacenamiento.cs">
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
@@ -193,6 +196,9 @@
     <Compile Include="Models\modeloVideo.cs">
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Monitor.cs">
+      <DependentUpon>ConexionServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Perfiles.cs">
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
@@ -206,6 +212,9 @@
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\procesador.cs">
+      <DependentUpon>ConexionServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\proveedor.cs">
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PRUEBA.cs">
@@ -241,6 +250,9 @@
     <Compile Include="Models\Usuarios.cs">
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\UsuariosCliente.cs">
+      <DependentUpon>ConexionServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -257,8 +269,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\ConexionServer.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ConexionServer.Context.cs</LastGenOutput>
       <DependentUpon>ConexionServer.edmx</DependentUpon>
+      <LastGenOutput>ConexionServer.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\ConexionServer.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
