@@ -20,26 +20,16 @@ namespace MRP_RatboyServer.Models
             this.cuelloBotella = new HashSet<cuelloBotella>();
             this.Perfil_Ensamble = new HashSet<Perfil_Ensamble>();
         }
-
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Ensamble")]
+    
         public int idEnsamble { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Placa madre")]
         public int idPlacaMadre_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Procesador")]
         public int idProcesador_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID RAM")]
         public int idRAM_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Almacenamiento")]
         public int idAlmacenamiento_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Fuente de poder")]
         public int idFuentePoder_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tarjeta de Video")]
         public int idTarjetaVideo_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Gabinete")]
         public int idGabinete_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Empleado")]
         public int idEmpleado_FK { get; set; }
     
         public virtual Almacenamiento Almacenamiento { get; set; }
@@ -50,7 +40,6 @@ namespace MRP_RatboyServer.Models
         public virtual LogEmpleado LogEmpleado { get; set; }
         public virtual memoriaRAM memoriaRAM { get; set; }
         public virtual modeloVideo modeloVideo { get; set; }
-        public virtual PlacaMadre PlacaMadre { get; set; }
         public virtual procesador procesador { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Perfil_Ensamble> Perfil_Ensamble { get; set; }

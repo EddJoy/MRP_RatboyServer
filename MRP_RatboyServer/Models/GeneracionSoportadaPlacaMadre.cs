@@ -14,13 +14,9 @@ namespace MRP_RatboyServer.Models
     
     public partial class GeneracionSoportadaPlacaMadre
     {
-        [System.ComponentModel.DataAnnotations.Display(Name = "Generación soportada por tarjeta madre")]
         public int idGeneracionSoportadaPlacaMadre { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tarjeta madre")]
         public int idPlacaMadre_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Generación del procesador")]
         public int idGeneracionProcesador_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
     
         public virtual detalleGeneracionProcesador detalleGeneracionProcesador { get; set; }

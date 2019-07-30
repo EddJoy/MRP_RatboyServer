@@ -17,51 +17,29 @@ namespace MRP_RatboyServer.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PlacaMadre()
         {
-            this.Ensamble = new HashSet<Ensamble>();
             this.GeneracionSoportadaPlacaMadre = new HashSet<GeneracionSoportadaPlacaMadre>();
         }
-
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tarjeta madre")]
+    
         public int idPlacaMadre { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Nombre")]
         public string Nombre { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Tipo de memoria")]
         public int idtipoMemoria { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Max. velocidad de memoria")]
         public int maxVelocidadMemoria { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus de M2")]
         public int statusM2 { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Cantidad puertos M2")]
         public int cantidadM2 { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Descripción")]
         public string Descripcion { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Gaming")]
         public int Gaming { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Tamaño de placa")]
         public int idTamaño_FK { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Código de barras")]
         public byte[] codBarras { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "PCIexpress")]
         public int PCIexpress { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "SATA")]
         public int SATA { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Costo con proveedor")]
         public double costoProveedor { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Costo a venta")]
         public double costoVenta { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Marca")]
         public string marca { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Modelo")]
         public string modelo { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "Watts")]
         public Nullable<double> watts { get; set; }
-        [System.ComponentModel.DataAnnotations.Display(Name = "ID Socket")]
         public int idSocket_FK { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ensamble> Ensamble { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GeneracionSoportadaPlacaMadre> GeneracionSoportadaPlacaMadre { get; set; }
         public virtual socket socket { get; set; }

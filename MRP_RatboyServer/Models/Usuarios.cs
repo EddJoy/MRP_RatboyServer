@@ -11,9 +11,7 @@ namespace MRP_RatboyServer.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-
+    
     public partial class Usuarios
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,20 +20,13 @@ namespace MRP_RatboyServer.Models
             this.correoElectronico = new HashSet<correoElectronico>();
             this.LogEmpleado = new HashSet<LogEmpleado>();
         }
-
-        [Display(Name = "ID Usuario")]
+    
         public int idUsuario { get; set; }
-        [Display(Name = "Nombre de usuario")]
         public string username { get; set; }
-        [Display(Name = "Contraseña")]
         public string password { get; set; }
-        [Display(Name = "Estatus")]
         public int estatus { get; set; }
-        [Display(Name = "ID Persona")]
         public int idPersona_FK { get; set; }
-        [Display(Name = "Correo")]
         public string correo { get; set; }
-        [Display(Name = "Tipo de usuario")]
         public bool tipoUsuario { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

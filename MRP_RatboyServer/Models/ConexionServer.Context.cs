@@ -15,10 +15,10 @@ namespace MRP_RatboyServer.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class BD_ArmadoPcEntities : DbContext
+    public partial class BD_ArmadoPcEntities1 : DbContext
     {
-        public BD_ArmadoPcEntities()
-            : base("name=BD_ArmadoPcEntities")
+        public BD_ArmadoPcEntities1()
+            : base("name=BD_ArmadoPcEntities1")
         {
         }
     
@@ -27,6 +27,7 @@ namespace MRP_RatboyServer.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Accesorio> Accesorio { get; set; }
         public virtual DbSet<Almacenamiento> Almacenamiento { get; set; }
         public virtual DbSet<correoElectronico> correoElectronico { get; set; }
         public virtual DbSet<cuelloBotella> cuelloBotella { get; set; }
@@ -38,11 +39,13 @@ namespace MRP_RatboyServer.Models
         public virtual DbSet<LogEmpleado> LogEmpleado { get; set; }
         public virtual DbSet<memoriaRAM> memoriaRAM { get; set; }
         public virtual DbSet<modeloVideo> modeloVideo { get; set; }
+        public virtual DbSet<Monitor> Monitor { get; set; }
         public virtual DbSet<Perfil_Ensamble> Perfil_Ensamble { get; set; }
         public virtual DbSet<Perfiles> Perfiles { get; set; }
         public virtual DbSet<Persona> Persona { get; set; }
         public virtual DbSet<PlacaMadre> PlacaMadre { get; set; }
         public virtual DbSet<procesador> procesador { get; set; }
+        public virtual DbSet<proveedor> proveedor { get; set; }
         public virtual DbSet<PRUEBA> PRUEBA { get; set; }
         public virtual DbSet<socket> socket { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
@@ -51,6 +54,7 @@ namespace MRP_RatboyServer.Models
         public virtual DbSet<tipo_usuarios> tipo_usuarios { get; set; }
         public virtual DbSet<tipoMemoria> tipoMemoria { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<UsuariosCliente> UsuariosCliente { get; set; }
         public virtual DbSet<URLImagenes> URLImagenes { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
