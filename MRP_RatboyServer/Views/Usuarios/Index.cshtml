@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MRP_RatboyServer.Models.Usuarios>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MenuLateral.cshtml";
+}
+
+@{ 
+    // C# segmento de código
+    var numero = Model.Count();
+}
+
+<h2>Usuarios <small>  cantidad de registros: @numero </small></h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Correo
+        </th>
+        <th>
+            Opciones
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Persona.nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.correo)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.idUsuario }) |
+        @Html.ActionLink("Detalles", "Details", new { id = item.idUsuario }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.idUsuario })
+    </td>
+</tr>
+}
+
+</table>

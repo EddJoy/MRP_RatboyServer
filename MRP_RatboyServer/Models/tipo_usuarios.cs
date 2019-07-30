@@ -14,8 +14,11 @@ namespace MRP_RatboyServer.Models
     
     public partial class tipo_usuarios
     {
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID tipo de usuario")]
         public int id { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Descripción")]
         public string descripcion { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
     }
 }

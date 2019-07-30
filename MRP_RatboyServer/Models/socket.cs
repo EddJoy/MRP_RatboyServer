@@ -20,9 +20,12 @@ namespace MRP_RatboyServer.Models
             this.PlacaMadre = new HashSet<PlacaMadre>();
             this.procesador = new HashSet<procesador>();
         }
-    
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Socket")]
         public int idSocket { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Nombre")]
         public string nombre { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

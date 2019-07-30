@@ -14,10 +14,15 @@ namespace MRP_RatboyServer.Models
     
     public partial class correoElectronico
     {
+        [System.ComponentModel.DataAnnotations.Display(Name = "Fecha")]
         public System.DateTime fecha { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Estatus")]
         public bool estatus { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Campo autogenerado")]
         public int campoAutogenerado { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Usuario")]
         public int idUsuario_FK { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "ID Correo")]
         public int idCorreoElectronico { get; set; }
     
         public virtual Usuarios Usuarios { get; set; }
