@@ -21,7 +21,7 @@ namespace MRP_RatboyServer.Controllers
         {
             if(!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
             {
-                BD_ArmadoPcEntities1 db = new BD_ArmadoPcEntities1();
+                BD_ArmadoPcEntities db = new BD_ArmadoPcEntities();
                 var user = db.Usuarios.FirstOrDefault(e => e.correo == email && e.password == password);
                 // si usuario es diferente de null
                 if(user != null)
@@ -39,7 +39,7 @@ namespace MRP_RatboyServer.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();

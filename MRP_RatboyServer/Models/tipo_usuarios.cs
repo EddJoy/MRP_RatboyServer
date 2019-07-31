@@ -14,8 +14,17 @@ namespace MRP_RatboyServer.Models
     
     public partial class tipo_usuarios
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tipo_usuarios()
+        {
+            this.Usuarios = new HashSet<Usuarios>();
+        }
+    
         public int id { get; set; }
         public string descripcion { get; set; }
         public bool estatus { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Usuarios> Usuarios { get; set; }
     }
 }

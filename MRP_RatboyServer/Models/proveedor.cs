@@ -17,6 +17,5 @@ namespace MRP_RatboyServer.Models
         public int idProveedor { get; set; }
         public string nombreProveedor { get; set; }
         public string nombreEmpresa { get; set; }
-        public int tipo { get; set; }
     }
 }

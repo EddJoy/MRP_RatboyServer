@@ -10,10 +10,10 @@ using MRP_RatboyServer.Models;
 
 namespace MRP_RatboyServer.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class UsuariosController : Controller
     {
-        private BD_ArmadoPcEntities1 db = new BD_ArmadoPcEntities1();
+        private BD_ArmadoPcEntities db = new BD_ArmadoPcEntities();
 
         // GET: Usuarios
         public ActionResult Index()

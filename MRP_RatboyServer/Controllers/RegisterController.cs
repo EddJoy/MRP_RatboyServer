@@ -7,16 +7,44 @@ using MRP_RatboyServer.Models;
 using System.Web.Hosting;
 using System.Text;
 using System.Net.Mail;
+using System.Web.Security;
 
 namespace MRP_RatboyServer.Controllers
 {
     public class RegisterController : Controller
     {
-        BD_ArmadoPcEntities1 db = new BD_ArmadoPcEntities1();
+        BD_ArmadoPcEntities db = new BD_ArmadoPcEntities();
         // GET: Register
         public ActionResult Index()
         {
             return View();
+        }
+
+        //Login para usuarios cliente
+        //TODO relacionar metodo con view
+        [HttpPost]
+        public ActionResult Login(string Email, string Password)
+        {
+            if (!string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password))
+            {
+                BD_ArmadoPcEntities db = new BD_ArmadoPcEntities();
+                var user = db.UsuariosCliente.FirstOrDefault(e => e.correo == Email && e.password == Password && e.isValid == true);
+                // si usuario es diferente de null
+                if (user != null)
+                {
+                    // encontramos un usuario con los datos
+                    FormsAuthentication.SetAuthCookie(user.correo, true);
+                    return RedirectToAction("Index", "Cliente");
+                }
+                else
+                {
+                    return RedirectToAction("Index", new { message = "No enontramos tus datos" });
+                }
+            }
+            else
+            {
+                return RedirectToAction("Index", new { message = "Llena los campos para poder iniciar sesión" });
+            }
         }
 
         public JsonResult SaveData(UsuariosCliente model)
