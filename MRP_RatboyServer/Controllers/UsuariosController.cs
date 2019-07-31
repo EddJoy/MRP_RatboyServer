@@ -13,7 +13,11 @@ namespace MRP_RatboyServer.Controllers
     [Authorize]
     public class UsuariosController : Controller
     {
+<<<<<<< Updated upstream
         private BD_ArmadoPcEntities1 db = new BD_ArmadoPcEntities1();
+=======
+        private BD_ArmadoPcEntities4 db = new BD_ArmadoPcEntities4();
+>>>>>>> Stashed changes
 
         // GET: Usuarios
         public ActionResult Index()

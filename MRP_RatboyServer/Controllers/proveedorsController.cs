@@ -6,112 +6,107 @@ using MRP_RatboyServer.Models;
 
 namespace MRP_RatboyServer.Controllers
 {
-    [Authorize]
-    public class PersonasController : Controller
+    public class proveedorsController : Controller
     {
-<<<<<<< Updated upstream
-        private BD_ArmadoPcEntities1 db = new BD_ArmadoPcEntities1();
-=======
         private BD_ArmadoPcEntities4 db = new BD_ArmadoPcEntities4();
->>>>>>> Stashed changes
 
-        // GET: Personas
+        // GET: proveedors
         public ActionResult Index()
         {
-            return View(db.Persona.ToList());
+            return View(db.proveedor.ToList());
         }
 
-        // GET: Personas/Details/5
+        // GET: proveedors/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.Persona.Find(id);
-            if (persona == null)
+            proveedor proveedor = db.proveedor.Find(id);
+            if (proveedor == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(proveedor);
         }
 
-        // GET: Personas/Create
+        // GET: proveedors/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Personas/Create
+        // POST: proveedors/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idPersona,nombre,apePaterno,apeMaterno,edad,direccion,estatus")] Persona persona)
+        public ActionResult Create([Bind(Include = "idProveedor,nombreProveedor,nombreEmpresa")] proveedor proveedor)
         {
             if (ModelState.IsValid)
             {
-                db.Persona.Add(persona);
+                db.proveedor.Add(proveedor);
                 db.SaveChanges();
-                return RedirectToAction("Create", "Usuarios");
+                return RedirectToAction("Index");
             }
 
-            return View(persona);
+            return View(proveedor);
         }
 
-        // GET: Personas/Edit/5
+        // GET: proveedors/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.Persona.Find(id);
-            if (persona == null)
+            proveedor proveedor = db.proveedor.Find(id);
+            if (proveedor == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(proveedor);
         }
 
-        // POST: Personas/Edit/5
+        // POST: proveedors/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idPersona,nombre,apePaterno,apeMaterno,edad,direccion,estatus")] Persona persona)
+        public ActionResult Edit([Bind(Include = "idProveedor,nombreProveedor,nombreEmpresa")] proveedor proveedor)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(persona).State = EntityState.Modified;
+                db.Entry(proveedor).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(persona);
+            return View(proveedor);
         }
 
-        // GET: Personas/Delete/5
+        // GET: proveedors/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.Persona.Find(id);
-            if (persona == null)
+            proveedor proveedor = db.proveedor.Find(id);
+            if (proveedor == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(proveedor);
         }
 
-        // POST: Personas/Delete/5
+        // POST: proveedors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Persona persona = db.Persona.Find(id);
-            db.Persona.Remove(persona);
+            proveedor proveedor = db.proveedor.Find(id);
+            db.proveedor.Remove(proveedor);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

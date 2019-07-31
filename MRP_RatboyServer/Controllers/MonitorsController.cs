@@ -1,117 +1,116 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using MRP_RatboyServer.Models;
 
 namespace MRP_RatboyServer.Controllers
 {
-    [Authorize]
-    public class PersonasController : Controller
+    public class MonitorsController : Controller
     {
-<<<<<<< Updated upstream
-        private BD_ArmadoPcEntities1 db = new BD_ArmadoPcEntities1();
-=======
         private BD_ArmadoPcEntities4 db = new BD_ArmadoPcEntities4();
->>>>>>> Stashed changes
 
-        // GET: Personas
+        // GET: Monitors
         public ActionResult Index()
         {
-            return View(db.Persona.ToList());
+            return View(db.Monitor.ToList());
         }
 
-        // GET: Personas/Details/5
+        // GET: Monitors/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.Persona.Find(id);
-            if (persona == null)
+            Monitor monitor = db.Monitor.Find(id);
+            if (monitor == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(monitor);
         }
 
-        // GET: Personas/Create
+        // GET: Monitors/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Personas/Create
+        // POST: Monitors/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idPersona,nombre,apePaterno,apeMaterno,edad,direccion,estatus")] Persona persona)
+        public ActionResult Create([Bind(Include = "idMonitor,resolucion,tamaño,marca,modelo,estatus,precioProveedor,precioVenta")] Monitor monitor)
         {
             if (ModelState.IsValid)
             {
-                db.Persona.Add(persona);
+                db.Monitor.Add(monitor);
                 db.SaveChanges();
-                return RedirectToAction("Create", "Usuarios");
+                return RedirectToAction("Index");
             }
 
-            return View(persona);
+            return View(monitor);
         }
 
-        // GET: Personas/Edit/5
+        // GET: Monitors/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.Persona.Find(id);
-            if (persona == null)
+            Monitor monitor = db.Monitor.Find(id);
+            if (monitor == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(monitor);
         }
 
-        // POST: Personas/Edit/5
+        // POST: Monitors/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idPersona,nombre,apePaterno,apeMaterno,edad,direccion,estatus")] Persona persona)
+        public ActionResult Edit([Bind(Include = "idMonitor,resolucion,tamaño,marca,modelo,estatus,precioProveedor,precioVenta")] Monitor monitor)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(persona).State = EntityState.Modified;
+                db.Entry(monitor).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(persona);
+            return View(monitor);
         }
 
-        // GET: Personas/Delete/5
+        // GET: Monitors/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.Persona.Find(id);
-            if (persona == null)
+            Monitor monitor = db.Monitor.Find(id);
+            if (monitor == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(monitor);
         }
 
-        // POST: Personas/Delete/5
+        // POST: Monitors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Persona persona = db.Persona.Find(id);
-            db.Persona.Remove(persona);
+            Monitor monitor = db.Monitor.Find(id);
+            db.Monitor.Remove(monitor);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
