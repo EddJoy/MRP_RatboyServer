@@ -9,11 +9,7 @@ namespace MRP_RatboyServer.Controllers
     [Authorize]
     public class PersonasController : Controller
     {
-<<<<<<< Updated upstream
-        private BD_ArmadoPcEntities1 db = new BD_ArmadoPcEntities1();
-=======
-        private BD_ArmadoPcEntities4 db = new BD_ArmadoPcEntities4();
->>>>>>> Stashed changes
+        private BD_ArmadoPcEntities db = new BD_ArmadoPcEntities();
 
         // GET: Personas
         public ActionResult Index()

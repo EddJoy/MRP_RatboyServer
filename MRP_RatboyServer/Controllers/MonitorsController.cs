@@ -12,7 +12,7 @@ namespace MRP_RatboyServer.Controllers
 {
     public class MonitorsController : Controller
     {
-        private BD_ArmadoPcEntities4 db = new BD_ArmadoPcEntities4();
+        private BD_ArmadoPcEntities db = new BD_ArmadoPcEntities();
 
         // GET: Monitors
         public ActionResult Index()

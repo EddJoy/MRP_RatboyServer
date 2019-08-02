@@ -15,10 +15,10 @@ namespace MRP_RatboyServer.Models
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class BD_ArmadoPcEntities1 : DbContext
+    public partial class BD_ArmadoPcEntities : DbContext
     {
-        public BD_ArmadoPcEntities1()
-            : base("name=BD_ArmadoPcEntities1")
+        public BD_ArmadoPcEntities()
+            : base("name=BD_ArmadoPcEntities")
         {
         }
     
@@ -29,6 +29,7 @@ namespace MRP_RatboyServer.Models
     
         public virtual DbSet<Accesorio> Accesorio { get; set; }
         public virtual DbSet<Almacenamiento> Almacenamiento { get; set; }
+        public virtual DbSet<Almacenamiento_Ensamble> Almacenamiento_Ensamble { get; set; }
         public virtual DbSet<correoElectronico> correoElectronico { get; set; }
         public virtual DbSet<cuelloBotella> cuelloBotella { get; set; }
         public virtual DbSet<detalleGeneracionProcesador> detalleGeneracionProcesador { get; set; }
@@ -36,8 +37,10 @@ namespace MRP_RatboyServer.Models
         public virtual DbSet<fuentePoder> fuentePoder { get; set; }
         public virtual DbSet<Gabinete> Gabinete { get; set; }
         public virtual DbSet<GeneracionSoportadaPlacaMadre> GeneracionSoportadaPlacaMadre { get; set; }
+        public virtual DbSet<inventario> inventario { get; set; }
         public virtual DbSet<LogEmpleado> LogEmpleado { get; set; }
         public virtual DbSet<memoriaRAM> memoriaRAM { get; set; }
+        public virtual DbSet<memoriaRAM_Ensamble> memoriaRAM_Ensamble { get; set; }
         public virtual DbSet<modeloVideo> modeloVideo { get; set; }
         public virtual DbSet<Monitor> Monitor { get; set; }
         public virtual DbSet<Perfil_Ensamble> Perfil_Ensamble { get; set; }
@@ -53,6 +56,7 @@ namespace MRP_RatboyServer.Models
         public virtual DbSet<tarjetaVideo> tarjetaVideo { get; set; }
         public virtual DbSet<tipo_usuarios> tipo_usuarios { get; set; }
         public virtual DbSet<tipoMemoria> tipoMemoria { get; set; }
+        public virtual DbSet<UserRole> UserRole { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
         public virtual DbSet<UsuariosCliente> UsuariosCliente { get; set; }
         public virtual DbSet<URLImagenes> URLImagenes { get; set; }

@@ -154,6 +154,9 @@
     <Compile Include="Models\Almacenamiento.cs">
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Almacenamiento_Ensamble.cs">
+      <DependentUpon>ConexionServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ConexionServer.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -197,6 +200,9 @@
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\memoriaRAM.cs">
+      <DependentUpon>ConexionServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\memoriaRAM_Ensamble.cs">
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\modeloVideo.cs">
@@ -251,6 +257,9 @@
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\URLImagenes.cs">
+      <DependentUpon>ConexionServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserRole.cs">
       <DependentUpon>ConexionServer.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuarios.cs">
