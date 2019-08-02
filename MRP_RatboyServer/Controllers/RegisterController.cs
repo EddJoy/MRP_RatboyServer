@@ -51,7 +51,7 @@ namespace MRP_RatboyServer.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Cliente");
         }
 
         public JsonResult SaveData(UsuariosCliente model)

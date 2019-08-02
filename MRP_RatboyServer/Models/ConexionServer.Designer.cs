@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Dulce\Desktop\MRP_RatboyServer\MRP_RatboyServer\Models\ConexionServer.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\desar\source\repos\MRP_RatboyServer\MRP_RatboyServer\Models\ConexionServer.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

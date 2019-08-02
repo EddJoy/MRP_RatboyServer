@@ -18,7 +18,7 @@ namespace MRP_RatboyServer.Models
         public int idComponente { get; set; }
         public string codigoBarra { get; set; }
         public int tipoProducto { get; set; }
-        public string marca { get; set; }
+        public Nullable<int> marca { get; set; }
         public string modelo { get; set; }
         public decimal precio { get; set; }
         public int idProveedor { get; set; }

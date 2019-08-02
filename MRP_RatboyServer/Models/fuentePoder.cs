@@ -23,7 +23,7 @@ namespace MRP_RatboyServer.Models
         public int idFuentePoder { get; set; }
         public double costoProveedor { get; set; }
         public double costoVenta { get; set; }
-        public string marca { get; set; }
+        public Nullable<int> marca { get; set; }
         public string modelo { get; set; }
         public bool estatus { get; set; }
         public double watts { get; set; }

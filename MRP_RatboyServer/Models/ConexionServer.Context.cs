@@ -39,6 +39,7 @@ namespace MRP_RatboyServer.Models
         public virtual DbSet<GeneracionSoportadaPlacaMadre> GeneracionSoportadaPlacaMadre { get; set; }
         public virtual DbSet<inventario> inventario { get; set; }
         public virtual DbSet<LogEmpleado> LogEmpleado { get; set; }
+        public virtual DbSet<Marca> Marca { get; set; }
         public virtual DbSet<memoriaRAM> memoriaRAM { get; set; }
         public virtual DbSet<memoriaRAM_Ensamble> memoriaRAM_Ensamble { get; set; }
         public virtual DbSet<modeloVideo> modeloVideo { get; set; }
@@ -55,6 +56,7 @@ namespace MRP_RatboyServer.Models
         public virtual DbSet<Tamaño> Tamaño { get; set; }
         public virtual DbSet<tarjetaVideo> tarjetaVideo { get; set; }
         public virtual DbSet<tipo_usuarios> tipo_usuarios { get; set; }
+        public virtual DbSet<TipoAlmacenamiento> TipoAlmacenamiento { get; set; }
         public virtual DbSet<tipoMemoria> tipoMemoria { get; set; }
         public virtual DbSet<UserRole> UserRole { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }

@@ -15,13 +15,15 @@ namespace MRP_RatboyServer.Models
     public partial class Accesorio
     {
         public int idAccesorio { get; set; }
-        public bool categoria { get; set; }
+        public int categoria { get; set; }
         public string nombre { get; set; }
-        public string marca { get; set; }
+        public int marca { get; set; }
         public string modelo { get; set; }
-        public double precioProveedor { get; set; }
-        public double precioVenta { get; set; }
+        public decimal precioProveedor { get; set; }
+        public decimal precioVenta { get; set; }
         public bool estatus { get; set; }
         public string descripcion { get; set; }
+    
+        public virtual Marca Marca1 { get; set; }
     }
 }
