@@ -140,6 +140,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\MiCuentaController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
@@ -279,6 +280,7 @@
     <Content Include="fonts\css\bootstrap.min.css" />
     <Content Include="fonts\css\font-awesome.min.css" />
     <Content Include="fonts\css\Style.css" />
+    <Content Include="fonts\css\StyleOptionMiCuenta.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -346,6 +348,8 @@
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Register\Confirm.cshtml" />
     <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\MiCuenta\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutMiCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

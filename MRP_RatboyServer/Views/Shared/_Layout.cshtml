@@ -26,7 +26,11 @@
                     <li>@Html.ActionLink("Contacto", "Contact", "Admin")</li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li><a href="/Admin/Logout">Cerrar sesión</a></li>
+                        <li><a href="/MiCuenta/Index">Mi cuenta</a></li>
+                    }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/Register/Logout">Cerrar sesión</a></li>
                     }
                 </ul>
             </div>

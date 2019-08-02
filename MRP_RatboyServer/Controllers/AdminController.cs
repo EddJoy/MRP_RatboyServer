@@ -39,7 +39,7 @@ namespace MRP_RatboyServer.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();

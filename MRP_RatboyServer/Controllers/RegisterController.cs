@@ -47,6 +47,13 @@ namespace MRP_RatboyServer.Controllers
             }
         }
 
+        [Authorize]
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index");
+        }
+
         public JsonResult SaveData(UsuariosCliente model)
         {
             model.isValid = false;
