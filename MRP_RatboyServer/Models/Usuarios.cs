@@ -19,6 +19,7 @@ namespace MRP_RatboyServer.Models
         {
             this.correoElectronico = new HashSet<correoElectronico>();
             this.LogEmpleado = new HashSet<LogEmpleado>();
+            this.UserRole = new HashSet<UserRole>();
         }
     
         public int idUsuario { get; set; }
@@ -27,12 +28,15 @@ namespace MRP_RatboyServer.Models
         public int estatus { get; set; }
         public int idPersona_FK { get; set; }
         public string correo { get; set; }
-        public bool tipoUsuario { get; set; }
+        public int tipo_id_FK { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<correoElectronico> correoElectronico { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LogEmpleado> LogEmpleado { get; set; }
         public virtual Persona Persona { get; set; }
+        public virtual tipo_usuarios tipo_usuarios { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<UserRole> UserRole { get; set; }
     }
 }
