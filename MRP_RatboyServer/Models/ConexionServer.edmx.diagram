@@ -4,7 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="ebf5ede0e4874acfb93d54959233ce2d" Name="Diagram1">
+=======
+      <Diagram DiagramId="3e87c3ff968647d799fa7690ec420b15" Name="Diagram1">
+>>>>>>> 8ae19bd0e3b80453c06810c2492123e759a43f10
         <EntityTypeShape EntityType="BD_ArmadoPcModel.Accesorio" Width="1.5" PointX="12.75" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BD_ArmadoPcModel.Almacenamiento" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
         <EntityTypeShape EntityType="BD_ArmadoPcModel.Almacenamiento_Ensamble" Width="1.5" PointX="10.5" PointY="5.75" IsExpanded="true" />

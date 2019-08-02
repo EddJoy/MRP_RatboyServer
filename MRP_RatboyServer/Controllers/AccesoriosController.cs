@@ -1,113 +1,116 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using MRP_RatboyServer.Models;
 
 namespace MRP_RatboyServer.Controllers
 {
-    [Authorize]
-    public class PersonasController : Controller
+    public class AccesoriosController : Controller
     {
         private BD_ArmadoPcEntities db = new BD_ArmadoPcEntities();
 
-        // GET: Personas
+        // GET: Accesorios
         public ActionResult Index()
         {
-            return View(db.Persona.ToList());
+            return View(db.Accesorio.ToList());
         }
 
-        // GET: Personas/Details/5
+        // GET: Accesorios/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.Persona.Find(id);
-            if (persona == null)
+            Accesorio accesorio = db.Accesorio.Find(id);
+            if (accesorio == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(accesorio);
         }
 
-        // GET: Personas/Create
+        // GET: Accesorios/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Personas/Create
+        // POST: Accesorios/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idPersona,nombre,apePaterno,apeMaterno,edad,direccion,estatus")] Persona persona)
+        public ActionResult Create([Bind(Include = "idAccesorio,categoria,nombre,marca,modelo,precioProveedor,precioVenta,estatus,descripcion")] Accesorio accesorio)
         {
             if (ModelState.IsValid)
             {
-                db.Persona.Add(persona);
+                db.Accesorio.Add(accesorio);
                 db.SaveChanges();
-                return RedirectToAction("Create", "Usuarios");
+                return RedirectToAction("Index");
             }
 
-            return View(persona);
+            return View(accesorio);
         }
 
-        // GET: Personas/Edit/5
+        // GET: Accesorios/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.Persona.Find(id);
-            if (persona == null)
+            Accesorio accesorio = db.Accesorio.Find(id);
+            if (accesorio == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(accesorio);
         }
 
-        // POST: Personas/Edit/5
+        // POST: Accesorios/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idPersona,nombre,apePaterno,apeMaterno,edad,direccion,estatus")] Persona persona)
+        public ActionResult Edit([Bind(Include = "idAccesorio,categoria,nombre,marca,modelo,precioProveedor,precioVenta,estatus,descripcion")] Accesorio accesorio)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(persona).State = EntityState.Modified;
+                db.Entry(accesorio).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(persona);
+            return View(accesorio);
         }
 
-        // GET: Personas/Delete/5
+        // GET: Accesorios/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Persona persona = db.Persona.Find(id);
-            if (persona == null)
+            Accesorio accesorio = db.Accesorio.Find(id);
+            if (accesorio == null)
             {
                 return HttpNotFound();
             }
-            return View(persona);
+            return View(accesorio);
         }
 
-        // POST: Personas/Delete/5
+        // POST: Accesorios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Persona persona = db.Persona.Find(id);
-            db.Persona.Remove(persona);
+            Accesorio accesorio = db.Accesorio.Find(id);
+            db.Accesorio.Remove(accesorio);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

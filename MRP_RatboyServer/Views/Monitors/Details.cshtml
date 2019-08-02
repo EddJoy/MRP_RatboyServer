@@ -1,0 +1,74 @@
+﻿@model MRP_RatboyServer.Models.Monitor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Monitor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.resolucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resolucion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tamaño)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tamaño)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioProveedor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioProveedor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioVenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioVenta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idMonitor }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

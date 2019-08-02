@@ -138,12 +138,20 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccesoriosController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\MiCuentaController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+=======
+    <Compile Include="Controllers\MonitorsController.cs" />
+    <Compile Include="Controllers\PersonasController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\proveedorsController.cs" />
+>>>>>>> 8ae19bd0e3b80453c06810c2492123e759a43f10
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -345,11 +353,29 @@
     <Content Include="Views\Personas\Index.cshtml" />
     <Content Include="Views\Shared\_MenuLateral.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Register\Confirm.cshtml" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\MiCuenta\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutMiCliente.cshtml" />
+=======
+    <Content Include="Views\proveedors\Create.cshtml" />
+    <Content Include="Views\proveedors\Delete.cshtml" />
+    <Content Include="Views\proveedors\Details.cshtml" />
+    <Content Include="Views\proveedors\Edit.cshtml" />
+    <Content Include="Views\proveedors\Index.cshtml" />
+    <Content Include="Views\Monitors\Create.cshtml" />
+    <Content Include="Views\Monitors\Delete.cshtml" />
+    <Content Include="Views\Monitors\Details.cshtml" />
+    <Content Include="Views\Monitors\Edit.cshtml" />
+    <Content Include="Views\Monitors\Index.cshtml" />
+    <Content Include="Views\Accesorios\Create.cshtml" />
+    <Content Include="Views\Accesorios\Delete.cshtml" />
+    <Content Include="Views\Accesorios\Details.cshtml" />
+    <Content Include="Views\Accesorios\Edit.cshtml" />
+    <Content Include="Views\Accesorios\Index.cshtml" />
+>>>>>>> 8ae19bd0e3b80453c06810c2492123e759a43f10
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
